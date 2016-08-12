@@ -1,0 +1,29 @@
+@import "../../../builder/bower_components/susy/sass/susy";
+/* @include span(12); */
+
+
+
+$susy-columns: 12;
+$susy-container: 940px;
+$susy-gutter-width: 15px;
+$susy-column-width : ($susy-container - ($susy-columns - 1)*$susy-gutter-width )/$susy-columns;
+
+$susy: (
+  gutter-position: split,
+  container: $susy-container,
+  columns: $susy-columns,
+  gutters: $susy-gutter-width/$susy-column-width,
+  last-flow: to,
+  global-box-sizing: border-box,
+  debug: (image: hide)
+);
+%rowDefaultStyles {
+  @include break;
+  @include susy-clearfix;
+/*   margin-left: -$susy-gutter-width/2;
+  margin-right: -$susy-gutter-width/2; */
+}
+@mixin row() {
+  @extend %rowDefaultStyles;
+}
+

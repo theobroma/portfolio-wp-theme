@@ -1,0 +1,36 @@
+{
+  "name": "GulpOnly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "breakpoint": "^0.1.6",
+    "breakpoint-slicer": "^2.0.0",
+    "browser-sync": "*",
+    "browserify": "^13.0.1",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-csso": "^2.0.0",
+    "gulp-directory-sync": "^1.2.3",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "^1.5.4",
+    "gulp-watch": "*",
+    "imagemin-pngquant": "^5.0.0",
+    "rimraf": "^2.5.3",
+    "run-sequence": "^1.2.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

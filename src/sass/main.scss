@@ -1,0 +1,193 @@
+@import "base/_index.scss";
+@import "layout/_index.scss";
+@import "modules/_index.scss";
+@import "state/_index.scss";
+
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #fff;
+
+html {
+  height: 100%;
+}
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #262626;
+  height: 100%;
+}
+.global-wrap {
+    min-height: 100%;
+    position: relative;
+}
+.r-container {
+    @include at(xs){
+        background-color: red;
+    }
+    @include at(sm){
+        background-color: orange;
+    }
+    @include at(md){
+        background-color: yellow;
+    }
+    @include at(lg){
+        background-color: green;
+    }
+    @include at(xl){
+        background-color: blue;
+    }
+}
+.container{
+    @include container;
+}
+//Example
+.b2 {
+    &-item {
+        text-align:center;
+        @include at(xs){
+            @include span(12);
+        }
+        @include at(sm){
+            @include span(6);
+        }
+        @include at(md){
+            @include span(6);
+        }
+        @include from(lg){
+            @include span(3);
+        }
+
+    }
+}
+//-------------------
+.button {
+    background: #fff;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    border: 2px solid #0eaede;
+    &:hover {
+       background: #0eaede;
+       color: #fff;
+    }
+}
+
+
+.project-list {
+    background: #f5f5f5;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    padding: 20px 20px 20px 20px;
+    &_item {
+        @include row();
+    }
+    &_details {
+        @include at(xs){
+            @include span(12);
+        }
+        @include from(sm){
+            @include span(6);
+        }
+    }
+    &_thumbnail{
+        a {
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+            display: block;
+            margin-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease 0s;
+            text-decoration: none;
+        }
+    }
+    &_info {
+        word-wrap:break-word;
+        @include at(xs){
+            @include span(12);
+        }
+        @include from(sm){
+            @include span(6);
+        }
+    }
+    &_date{
+        color: #727272;
+    }
+    &_tags{
+        color: #727272;
+    }
+    &_desc{
+        color: #666;
+    }
+    &_title{
+        color: #000;
+        font: 2em PT sans, sans-serif;
+        font-weight: 400;
+        text-align: center;
+        padding : 10px 0 30px 0;
+        a {
+            text-decoration : none;
+            color: #000;
+            &:hover {
+                text-decoration : underline;
+            }
+        }
+    }
+
+    &_btn {
+        @include at(xs){
+            text-align: center;
+        }
+    }
+    li {
+        padding: 20px;
+        border-bottom: 1px solid #ededed;
+        list-style-type: none;
+    }
+}
+.image-bg{
+    display: block;
+    height: 430px;
+    position: relative;
+    width: 100%;
+    &:hover .image-shop-scroll {
+        background-position: center 100% !important;
+    }
+    & .image-shop-scroll {
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 430px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        transition: all 6s ease-out 0s;
+        width: 100%;
+    }
+}
+.image-shop-scroll {
+    &-1{
+        background-image: url('../img/bislite.jpg');
+    }
+    &-2{
+        background-image: url('../img/parallels.jpg');
+    }
+    &-3{
+        background-image: url('../img/modest.jpg');
+    }
+    &-4{
+        background-image: url('../img/omega.jpg');
+    }
+    &-5{
+        background-image: url('../img/geoparse.png');
+    }
+    &-6{
+        background-image: url('../img/todolist.png');
+    }
+    &-7{
+        background-image: url('../img/todolist.png');
+    }
+}

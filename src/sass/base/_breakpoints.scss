@@ -1,0 +1,10 @@
+@import "../../builder/bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "../../builder/bower_components/fake-breakpoint-slicer/stylesheets/_breakpoint-slicer.scss";
+
+$slicer-breakpoints: (
+    xs : 0,  // Extra small
+    sm  : 34em,  // Small
+    md : 48em, // Medium
+    lg  : 62em,  // Large
+    xl  : 75em,  // Extra Large
+);

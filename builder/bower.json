@@ -1,0 +1,21 @@
+{
+  "name": "gulp-susy-starter",
+  "version": "0.0.0",
+  "authors": [
+    "Zell Liew <zellwk@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2"
+  },
+  "devDependencies": {
+    "fake-breakpoint-slicer": "douglasduteil/breakpoint-slicer"
+  }
+}

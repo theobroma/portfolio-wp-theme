@@ -1,0 +1,35 @@
+.spectar {
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(73, 197, 135, 1) 0%, rgba(73, 197, 135, 1) 1%, rgba(75, 201, 226, 1) 6%, rgba(255, 117, 117, 1) 13%, rgba(240, 200, 81, 1) 20%, rgba(141, 116, 185, 1) 27%, rgba(248, 118, 79, 1) 34%, rgba(73, 197, 135, 1) 42%, rgba(75, 201, 226, 1) 49%, rgba(255, 117, 117, 1) 56%, rgba(73, 197, 135, 1) 63%, rgba(255, 117, 117, 1) 70%, rgba(240, 200, 81, 1) 77%, rgba(141, 116, 185, 1) 84%, rgba(248, 118, 79, 1) 91%, rgba(73, 197, 135, 1) 98%, rgba(73, 197, 135, 1) 100%) repeat scroll 0 0;
+  height: 5px;
+  width: 100%;
+}
+.footer {
+    min-height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0f151a;
+    &-in {
+        @include row();
+        padding : 30px 10px 30px 10px;
+    }
+    &_copy {
+        @include at(xs){
+            @include span(12);
+            text-align : center;
+        }
+        @include from(sm){
+            @include span(6);
+        }
+    }
+    &_links {
+        @include at(xs){
+            @include span(12);
+            text-align : center;
+        }
+        @include from(sm){
+            @include span(6);
+        }
+    }
+}
