@@ -8,32 +8,46 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title(); ?>
-	</header><!-- .entry-header -->
-	<div class="entry-content">
-		<?php the_content( sprintf( 
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),get_the_title() ) );
-		?>
-	</div><!-- .entry-content -->
-	<li>
-	    <div class="project-list_item">
-	      <div class="project-list_details">
-	        <div class="project-list_thumbnail"><a href="http://theobromaprojects.esy.es/bislite/" target="_blank"><span class="image-bg"><span class="image-shop-scroll image-shop-scroll-1"></span></span></a></div>
-	      </div>
-	      <div class="project-list_info">
-	        <div class="project-list_title"><a href="http://theobromaprojects.esy.es/bislite/" target="_blank">Bislite</a></div>
-	        <div class="project-list_date"><span>Date released : Q4,2014</span></div>
-	        <div class="project-list_tags"><span>Tags : PSD2HTML,Responsive,Bootstrap,LESS</span></div>
-	        <div class="project-list_desc">
-	          <p>
-	            Pages "Portfolio" and "Contact us" are also available.
-	            Full of shortcomings. It's valuable for me as my first finished work.
-	          </p>
-	        </div>
-	        <div class="project-list_btn"><a href="https://github.com/theobroma/projects/tree/master/bislite" class="button">Source code</a></div>
-	      </div>
-	    </div>
-	</li>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+    <div class="project-list_item">
+      <!-- Get all custom fields -->
+      <?php $host_link = get_field('host_link');?>
+      <?php $code_link = get_field('code_link');?>
+      <?php $image = get_field('image'); ?>
+      <div class="project-list_details">
+         <div class="project-list_thumbnail">
+            <a href=<?php echo $host_link ?> target="_blank">
+                <span class="image-bg">
+                    <?php if( !empty($image) ): ?>
+                    <span class="image-shop-scroll"  style="background-image:url(<?php echo $image['url']; ?>)" alt="<?php echo the_title(); ?>"></span>
+                    <?php endif; ?>
+                </span>
+            </a>
+        </div>
+      </div>
+      <div class="project-list_info">
+            <?php if( !empty($host_link) ): ?>
+                <div class="project-list_title">
+                    <a href=<?php echo $host_link ?> target="_blank"> <?php the_title(); ?></a>
+                </div>
+            <?php endif; ?>
+        <div class="project-list_tags">
+            <span><?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?></span>
+        </div>
+        <div class="project-list_desc">
+            <?php the_content( sprintf(
+                __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),get_the_title() ) );
+            ?>
+        </div>
+
+        <?php if( !empty($code_link) ): ?>
+            <div class="project-list_btn">
+                <a href=<?php echo $code_link ?> class="button">Source code</a>
+            </div>
+        <?php endif; ?>
+      </div>
+      <div class="divider">
+        <hr>
+      </div>
+    </div>
 </article><!-- #post-## -->

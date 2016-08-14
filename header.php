@@ -15,7 +15,9 @@
         <div class="container">
           <div class="header-in">
             <div class="header-logo">
-              <h1>Портфолио<span>BETA</span></h1>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <h1><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?><span>BETA</span></h1>
+              </a>
             </div>
           </div>
         </div>

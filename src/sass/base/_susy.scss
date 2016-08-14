@@ -4,7 +4,7 @@
 
 
 $susy-columns: 12;
-$susy-container: 940px;
+$susy-container: 1170px;
 $susy-gutter-width: 15px;
 $susy-column-width : ($susy-container - ($susy-columns - 1)*$susy-gutter-width )/$susy-columns;
 
@@ -26,4 +26,3 @@ $susy: (
 @mixin row() {
   @extend %rowDefaultStyles;
 }
-

@@ -1,14 +1,19 @@
 <?php get_header(); ?>
       <div class="main">
+      <h2>Hello from Tag.php</h2>
         <div class="container">
-          <div class="project-list">
+
+          <div class="main">
                 <?php if ( have_posts() ) : ?>
 
-                <?php if ( is_home() && ! is_front_page() ) : ?>
-                  <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                  </header>
-                <?php endif; ?>
+                <div class="term_description">
+                    <span>Browsing Tag</span>
+                    <h2><?php single_tag_title(); ?></h2>
+                </div>
+
+
+
+                <div class="project-list">
 
                 <?php
                 // Start the loop.
@@ -37,6 +42,7 @@
 
               endif;
               ?>
+              </div>
           </div><!--/projectList -->
         </div><!--/container  -->
       </div><!--/main  -->
